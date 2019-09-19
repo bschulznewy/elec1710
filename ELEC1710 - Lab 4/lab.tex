@@ -203,14 +203,14 @@ In this lab your primary tasks are as follows:
     
     \item Import the project into the workspace:
     \begin{enumerate}
-        \item Click `File \textgreater Import', and select `General \textgreater Existing Projects into Workspace' from the list as shown in Figure \ref{fig:importtype}.
+        \item Click `File \textgreater Import', and select `General \textgreater Existing Projects into Workspace' from the list as shown in Figure \ref{fig:importtype}. Click `Next'.
     
-        \item Click the ``Select archive file'' option at the top and browse to \texttt{STM32Template.zip}, as shown in Figure \ref{fig:importzip}.
+        \item Select the ``Select archive file'' radio button at the top, click `Browse', find \texttt{STM32Template.zip}, and open it. If done correctly you should see something similar to Figure \ref{fig:importzip}.
     
         \item Click `Finish' to close the dialog then ensure that the project exists in the project explorer on the left side of the screen.
     \end{enumerate}
     
-    \item Compile the project by typing \texttt{CTRL+B} or clicking through the `Project \textgreater Build All' menu.
+    \item Compile the project by typing \texttt{CTRL+B} or clicking through the `Project \textgreater Build All' menu. If this fails do it again 2-3 times or until it finishes without error.
 \end{enumerate}
 
 \pagebreak
@@ -235,23 +235,27 @@ In this lab your primary tasks are as follows:
     \end{figure}
 
 
-    \item Select the new configuration and navigate to the `main' tab as shown in Figure \ref{fig:debug_noelf}. If the box under C/C++ Application is empty,  as it is in Figure \ref{fig:debug_noelf}, select 'search project' and choose the binary as shown in  Figure\ref{fig:elf_selection}. After selecting ok the .elf file should now be shown as it is in Figure\ref{fig:elf_filled_in}
+    \item Select the new configuration and navigate to the `main' tab as shown in Figure \ref{fig:debug_noelf}.
+    
+    If the box under C/C++ Application is empty,  as it is in Figure \ref{fig:debug_noelf}, select 'search project' and choose the binary as shown in  Figure\ref{fig:elf_selection}. After selecting ok the .elf file should now be shown as it is in Figure\ref{fig:elf_filled_in}.
+    
+    If the \texttt{.elf} file does not appear when clicking `Search Project...' then the project did not compile correctly. Press \texttt{ctrl+b} again or, as a last resort, select the menu item `Project - clean' from the top menus then attempt a build 2 or 3 more times. 
    
     \begin{figure}[H]
     \makebox[\textwidth][c]{\includegraphics[width=0.7\textwidth]{Figures/debug_noelf}}
-    \caption{Configuring OpenOCD for the ST-Link debugger.}
+    \caption{The debug configuration window.}
     \label{fig:debug_noelf}
     \end{figure}
 
    \begin{figure}[H]
     \makebox[\textwidth][c]{\includegraphics[width=0.7\textwidth]{Figures/elf_selection}}
-    \caption{Configuring OpenOCD for the ST-Link debugger.}
+    \caption{Manually finding the \texttt{.elf} binary file.}
     \label{fig:elf_selection}
     \end{figure}
 
    \begin{figure}[H]
     \makebox[\textwidth][c]{\includegraphics[width=0.7\textwidth]{Figures/elf_filled_in}}
-    \caption{Configuring OpenOCD for the ST-Link debugger.}
+    \caption{A correctly configured `Main' tab.}
     \label{fig:elf_filled_in}
     \end{figure}
 
@@ -264,7 +268,7 @@ In this lab your primary tasks are as follows:
     \label{fig:openocdconfig}
     \end{figure}
 
-    \item Ensure the ST-Link is plugged into the PC USB port.  Click the `Debug' button (bottom right), this will load the compiled binary onto the STM32 dev board and bring up a dialog box asking if you want to swap to the debug `perspective', click yes. You can swap between the debug and C/C++ perspectives by clicking the appropriate icons in the top right of the System Workbench window.
+    \item Ensure the ST-Link is plugged into the PC USB port.  Click the `Debug' button (bottom right), this will recompile the project then load the resulting binary onto the STM32 dev board and bring up a dialog box asking if you want to swap to the debug `perspective'. Click yes. You can swap between the debug and C/C++ perspectives by clicking the appropriate icons in the top right of the System Workbench window (ask a demonstrator to help locate them, they are small and subtle).
 
 
 \end{enumerate}

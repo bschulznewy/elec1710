@@ -1,0 +1,15 @@
+\BOOKMARK [1][-]{section.1}{Introduction}{}% 1
+\BOOKMARK [1][-]{section.2}{Program Algorithm}{}% 2
+\BOOKMARK [1][-]{section.3}{Assembly Reference}{}% 3
+\BOOKMARK [2][-]{subsection.3.1}{Load: ldr and ldrb}{section.3}% 4
+\BOOKMARK [2][-]{subsection.3.2}{Store: str}{section.3}% 5
+\BOOKMARK [2][-]{subsection.3.3}{Unsigned Bit Field Extract: ubfx}{section.3}% 6
+\BOOKMARK [2][-]{subsection.3.4}{Logical Shift Left: lsl}{section.3}% 7
+\BOOKMARK [1][-]{section.4}{Hardware Configuration}{}% 8
+\BOOKMARK [2][-]{subsection.4.1}{Hardware Requirements}{section.4}% 9
+\BOOKMARK [2][-]{subsection.4.2}{Hardware assembly}{section.4}% 10
+\BOOKMARK [1][-]{section.5}{Programming}{}% 11
+\BOOKMARK [2][-]{subsection.5.1}{Template Code}{section.5}% 12
+\BOOKMARK [2][-]{subsection.5.2}{Programming Setup}{section.5}% 13
+\BOOKMARK [2][-]{subsection.5.3}{Programming Task}{section.5}% 14
+\BOOKMARK [2][-]{subsection.5.4}{Delay Measurement}{section.5}% 15

@@ -354,7 +354,22 @@ Use the Saleae analyser to measure the delay between changing the input on \text
 
 
 \subsection{Debugging}
-One of the table entries is incorrect. Find out which one and fix this. 
+
+One of the table entries is incorrect (ie: the wrong, or insufficient, segments are illuminated). Find and correct this error.
+
+\subsection{Program Memory Size}
+
+Project part C will have some marks allocated for optimising code size. Measure the code size (in bytes) of all instructions between the \texttt{sseglut} and \texttt{ssegdata} labels. Do this by putting the debugger into ``single instruction stepping mode'', Figure \ref{fig:step}, to bring up the disassembly view and obtaining the memory addresses of the first and last instructions in the \texttt{sseglut} section, Figure \ref{fig:size}. You may use an online calculator to perform the hexadecimal subtraction. Note that you need to use the first address of the \texttt{ssegdata} section to include the size of the last instruction in \texttt{sseglut}.
+
+\begin{figure}[h]
+\makebox[\textwidth][c]{\includegraphics[width=0.4\textwidth]{instruction.png}}
+\caption{Click the ``\texttt{i}'' icon to enable single instruction stepping mode and enable the disassembly view.}\label{fig:step}
+\end{figure}
+
+\begin{figure}[h]
+\makebox[\textwidth][c]{\includegraphics[width=0.7\textwidth]{asm.png}}
+\caption{Dissasembly view with memory addresses for each instruction.}\label{fig:size}
+\end{figure}
 
 
 \end{document}

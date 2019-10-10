@@ -139,6 +139,8 @@ ldr r3, =0x12345678
 caption = Loading data from \texttt{GPIOA} using \texttt{ldr}.,
 label = 
 ]
+.equ    GPIOA_IDR, 0x40010808 // Address of GPIOA_IDR from datasheets
+// ... other code
 ldr r0, =GPIOA_IDR  // This constant needs to be defined in the code
 ldr r1, [r0]        // Load the data at address GPIOA_IDR into r1
 \end{lstlisting}
@@ -285,18 +287,21 @@ Perform the following construction steps:
     \item Connect 7 test leads from the Saleae analyser to \texttt{GPIOB} pins \texttt{B3} to \texttt{B9}.
     \item (Optional) You may wish to skip this step until the software has been written and confirmed working with the Saleae analyser.
     
-    Connect the 7-segment display to the STM32 via 330~$\Omega$ resistors. \textbf{NB:} The display will be dim but using 330~$\Omega$ resistors could exceed the STM32's maximum current rating.
+    Connect the 7-segment display to the STM32 via 330~$\Omega$ resistors.
     
-    Port pins B3, B4,..., B9 drive segments a, b,..., g respectively. User jumper cables as necessary.
+    Port pins B3, B4,..., B9 drive segments a, b, ... , g respectively. User jumper cables as necessary.
     
 
 \end{enumerate}
 
-\section{Programming}
+\pagebreak
+\section{Programming Tasks}
 
 \subsection{Template Code}
 
 Listing \ref{lst:code} is a template for this lab. It contains the LUT data required for driving a 7-segment display.
+
+\textbf{NB: One of the table entries contains a bug. This is intentional, you should find and correct it.}
 
 \begin{lstlisting}[
 caption = Code listing for \texttt{sseglut.s}.,
@@ -350,12 +355,14 @@ Using the instruction reference data in Section \ref{sec:asm} implement the algo
 
 \subsection{Delay Measurement}
 
-Use the Saleae analyser to measure the delay between changing the input on \texttt{GPIOA} and the corresponding bit pattern appearing on \texttt{GPIOB}. Compare this to the delay seen when using the CD74HC4511 chip.
+Use the Saleae analyser to measure the delay between changing the input on \texttt{GPIOA} and the corresponding bit pattern appearing on \texttt{GPIOB}.
+
+Compare the STM32's delay to the delay specified in the CD74HC4511 chip's datasheet of around 20~ns.
 
 
 \subsection{Debugging}
 
-One of the table entries is incorrect (ie: the wrong, or insufficient, segments are illuminated). Find and correct this error.
+One of the table entries is incorrect. Find and correct this error.
 
 \subsection{Program Memory Size}
 

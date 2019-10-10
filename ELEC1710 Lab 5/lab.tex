@@ -366,7 +366,9 @@ One of the table entries is incorrect. Find and correct this error.
 
 \subsection{Program Memory Size}
 
-Project part C will have some marks allocated for optimising code size. Measure the code size (in bytes) of all instructions between the \texttt{sseglut} and \texttt{ssegdata} labels. Do this by putting the debugger into ``single instruction stepping mode'', Figure \ref{fig:step}, to bring up the disassembly view and obtaining the memory addresses of the first and last instructions in the \texttt{sseglut} section, Figure \ref{fig:size}. You may use an online calculator to perform the hexadecimal subtraction. Note that you need to use the first address of the \texttt{ssegdata} section to include the size of the last instruction in \texttt{sseglut}.
+Project part C will have some marks allocated for optimising code size. Measure the code size (in bytes) of all instructions between the \texttt{sseglut} and \texttt{ssegdata} labels. Do this by putting the debugger into ``single instruction stepping mode'', Figure \ref{fig:step}, to bring up the disassembly view and obtaining the memory addresses of the first and last instructions in the \texttt{sseglut} section, Figure \ref{fig:size}. You may use an online calculator to perform the hexadecimal subtraction.
+
+\textbf{NB:} The first address of the \texttt{ssegdata} section should be used as the ``end'' address so that the calculation includes the last instruction in \texttt{sseglut}.
 
 \begin{figure}[h]
 \makebox[\textwidth][c]{\includegraphics[width=0.4\textwidth]{instruction.png}}
